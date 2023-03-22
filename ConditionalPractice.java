@@ -17,8 +17,6 @@ public class ConditionalPractice {
             else 
                 System.out.println(number);
         }
-
-
     }
 }
     
