@@ -1,4 +1,4 @@
-public class Patterns {
+public class patterns {
     public static void main(String[] args) {
         int rows = 6;
         // pattern A
@@ -15,6 +15,8 @@ public class Patterns {
             System.out.println();
         }
         System.out.println();
+        System.out.println("----------------");
+        System.out.println();
         // Pattern B
         for (int i = 1; i<=6 ; i++){
             for ( int j = 1 ; j <= i - 1 ; j++) //
@@ -28,4 +30,3 @@ public class Patterns {
         }
     }
 }
-
