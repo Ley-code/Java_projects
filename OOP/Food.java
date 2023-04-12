@@ -1,15 +1,14 @@
 package OOP;
 
+
 public class Food {
-    public static void main(String[] args) {
-        Food food1 = new Food("burger",2,50);
-        Food food2 = new Food("pizza", 3, 150);
-        System.out.println(food1.name);
-        food2.buy();
-    }
     String name;
     int quantity;
     float price;
+    int cash;
+    int money = 0;
+
+
     Food(String name, int quantity, float price){
         this.name = name;
         this.quantity = quantity;
@@ -19,6 +18,22 @@ public class Food {
         System.out.println("you are eating a "+ this.name);
     }
     void buy(){
-        System.out.println("you have to pay " + (this.price)*(this.quantity) + "$ first");
+        if ((this.price)*(this.quantity) > money){
+            System.out.println("you have to pay " + (this.price)*(this.quantity) + "$ first");
+        } else if ((this.price)*(this.quantity) <= money) {
+            System.out.println("you have bought the " + (this.name));
+            money-=(this.price)*(this.quantity);
+        }
+    
+    }
+    void getcash(int cash){
+        money += cash;
+        System.out.println("you have " + cash + "$ in your hand");
+    }
+    void moneyleft(){
+        System.out.println("Remaining balance = " + money);
+    }void totalprice(){
+        System.out.println((this.price)*(this.quantity));
     }
 }
+
