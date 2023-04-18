@@ -81,6 +81,13 @@ public class Arraypractice {
         }
         System.out.println(Arrays.toString(numbers));
         
+        //Question 8 =  Write a Java program to copy an array by iterating the array.
+        int[] numbers2 = new int[9];
+        for(int i = 0; i < numbers.length; i++){
+            numbers2[i] = numbers[i];
+        }
+        System.out.println("numbers2: " + Arrays.toString(numbers2));
+        
         //Question 9 = Write a java program to insert an element (specific position) in to an array.
         System.out.print("Insert number: ");
         int value = kb.nextInt();
