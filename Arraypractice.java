@@ -80,6 +80,18 @@ public class Arraypractice {
             numbers[i] = numbers[i+1];
         }
         System.out.println(Arrays.toString(numbers));
+        
+        //Question 9 = Write a java program to insert an element (specific position) in to an array.
+        System.out.print("Insert number: ");
+        int value = kb.nextInt();
+        System.out.print("Index postion: ");
+        int index = kb.nextInt();
+        
+        for(int i = numbers.length-1; i > index;i--){
+            numbers[i] = numbers[i-1];   
+        }
+        numbers[index] = value;
+        System.out.println(Arrays.toString(numbers));
         kb.close();
     }
 }
