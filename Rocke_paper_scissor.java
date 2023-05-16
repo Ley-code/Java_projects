@@ -13,11 +13,11 @@ public class Rocke_paper_scissor {
        
         choices[0] = "rock";
         choices[1] = "paper";
-        choices[2] = "scissors";
-
+        choices[2] = "scissor";
+        int rounds = 0;
         int count = 0;
 
-        while(true){
+        while(rounds < 10){
             int ran = random.nextInt(3);
             String computer = choices[ran];
 
@@ -33,14 +33,29 @@ public class Rocke_paper_scissor {
             if(computer.equals("paper")){
                 if(user.equals("rock")){
                     System.out.println("you tried :)");
-                }else if(user.equals("scissors")){
-                    System.out.println("You are correct!!");
+                }else if(user.equals("scissor")){
+                    System.out.println("You are won!!");
+                    count+=1;
                 }
-            } 
+            }else if(computer.equals("rock")){
+                if(user.equals("paper")){
+                    System.out.println("You won!!");
+                    count+=1;
+                }else if(user.equals("scissor")){
+                    System.out.println("you tried :)");
+                }
+            }else if(computer.equals("scissor")){
+                if(user.equals("rock")){
+                    System.out.println("you won!!");
+                    count+=1;
+                }else if(user.equals("paper")){
+                    System.out.println("you tried :)");
+                }
+            }
+            rounds +=1;    
             
-            
-            
-            
-        }     
+        }
+        System.out.println("--------------Results---------");
+        System.out.print("Score = " + count + '/' + 10);
     }
 }
